@@ -30,7 +30,14 @@ include_once "../PHP/LoginTecnicoHelper.php";
                 <button type="button" class="close" onclick="$('#InfoAlertDiv').removeClass('show');$('#InfoAlertDiv').addClass('hide');">&times;</button>
                 <p id="InfoAlert" class="m-0"></p>
             </div>
-            <form class="col-md-6 offset-md-3 col-12 mt-3">
+            <div class="col-md-3 offset-md-2 col-12">
+                <video src="../Files/Videos/waiting1.mp4" autoplay muted loop>
+                    Seu navegador não suporta o elemento <code>video</code>.
+                </video>
+            </div>
+            <form class="col-md-6 col-12 mt-3">
+                <h1>Login Tecnico</h1>
+                <hr>
                 <div class="form-group">
                     <label for="EmailTxt">Email address</label>
                     <input type="email" id="EmailTxt" class="form-control" placeholder="Enter email" required>

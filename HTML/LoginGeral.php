@@ -29,7 +29,14 @@ include_once "../PHP/LoginGeralHelper.php";
                 <button type="button" class="close" onclick="$('#InfoAlertDiv').removeClass('show');$('#InfoAlertDiv').addClass('hide');">&times;</button>
                 <p id="InfoAlert" class="m-0"></p>
             </div>
-            <form class="col-md-6 offset-md-3 col-12 mt-5">
+            <div class="col-md-3 offset-md-2 col-12">
+                <video src="../Files/Videos/waiting1.mp4" autoplay muted loop>
+                    Seu navegador não suporta o elemento <code>video</code>.
+                </video>
+            </div>
+            <form class="col-md-6 col-12 mt-5">
+                <h1>Login Geral</h1>
+                <hr>
                 <div class="form-group">
                     <label for="PasswordTxt">Password</label>
                     <input type="password" id="PasswordTxt" class="form-control" placeholder="Enter your password" required>
