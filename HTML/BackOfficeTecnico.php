@@ -23,6 +23,14 @@ include_once "../PHP/BackOfficeTecnicoHelper.php";
     include_once "Content/Navbar.html";
     ?>
     <h1>BackOffice Tecnico</h1>
+
+    <a href="../Files/Folha Requisição Tarefosucesso.xlsx" download>
+        <p>Download Controlo DST-MEO</p>
+    </a>
+
+    <a href="../Files/Controlo DST-MEO.xlsx" download>
+        <p>Download Folha Requisição Tarefosucesso</p>
+    </a>
 </body>
 
 <?php
