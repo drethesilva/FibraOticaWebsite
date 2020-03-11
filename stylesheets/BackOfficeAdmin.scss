@@ -1,5 +1,18 @@
 @import 'Generic';
 
+button, input[type="submit"]{
+    background: none;
+    border: none;
+    border-left: 1px solid rgba(0, 0, 0,0.8);
+    cursor: pointer;
+    transition: 0.3s;
+
+    &:hover,&:active{
+        padding: 10px;
+        background-color: rgba(173, 255, 47,0.7);
+    }
+}
+
 .filterable {
     margin-top: 15px;
 }
@@ -74,6 +87,7 @@
 
 .color{
     background: aliceblue;
+    height: 100%;
     padding: 20px;
     -webkit-box-shadow: 10px -5px 5px -8px rgba(0,0,0,0.8);
     -moz-box-shadow: 10px -5px 5px -8px rgba(0,0,0,0.8);
@@ -102,16 +116,19 @@ input[type="text"],input[type="email"],input[type="password"]{
     font-size: 1.25em;
     font-weight: 700;
     color: white;
-    background-color: black;
+    background-color: rgb(95, 158, 160);
+    padding: 5px;
+    border-radius: 10px;
     display: inline-block;
+    
 }
 
 .inputfile:focus + label,
 .inputfile + label:hover {
-    background-color: red;
+    background-color: rgba(95, 158, 160,0.8);
 }
 .inputfile + label {
 	cursor: pointer; /* "hand" cursor */
 }
 
-    
+
