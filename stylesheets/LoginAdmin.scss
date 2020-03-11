@@ -5,3 +5,18 @@
         width: 100%;
     }
 }
+
+video{
+    width: 100%;
+    min-height: 500px;
+    object-fit: cover;
+    -webkit-box-shadow: 10px 10px 10px -5px rgba(0,0,0,0.75);
+-moz-box-shadow: 10px 10px 10px -5px rgba(0,0,0,0.75);
+box-shadow: 10px 10px 10px -5px rgba(0,0,0,0.75);
+
+@media (max-width: $screen-sm-max) { 
+    min-height: 100px;
+    max-height: 100px;
+}
+
+}
