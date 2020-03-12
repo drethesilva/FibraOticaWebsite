@@ -1,8 +1,18 @@
 @import 'Generic';
 
 
+html {
+	scroll-behavior: smooth;
+}
+
+.go-top{
+    position: fixed;
+    right: 15px;
+    bottom: 20px;
+}
+
 .main-div{
-    background: lightblue;
+    background: rgb(173, 216, 230);
     padding: 15px;
     border-radius: 10px;
     -webkit-box-shadow: 10px -5px 5px -8px rgba(0, 0, 0, 0.8);
@@ -10,8 +20,13 @@
     box-shadow: 10px -5px 5px -8px rgba(0, 0, 0, 0.8);
     margin-bottom: 20px;
 
+    &:hover{
+        background:rgba(173, 216, 230,0.6)
+    }
+
     h2{
         text-transform: capitalize;
+        word-break: break-word;
         &::first-letter {
             -webkit-initial-letter: 1;
                     initial-letter: 1;
@@ -20,8 +35,39 @@
           }
     }
 
-    i{
+    h4{
+        margin-top: 15px;
         margin-left:20px;
+    }
+
+    a{
+        word-break: break-word;
+
+   
+    }
+
+    p{
+        word-break: break-word;
+        margin-left:20px;
+    }
+
+    i{
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    video{
+        width: 300px;
+        display: block;
+        max-height: 150px;
+        margin-left: 20px;
+    }
+
+    img{
+        height: 100px;
+        width: 100px;
+        object-fit: scale-down;
+        margin-left: 20px;
     }
     
  

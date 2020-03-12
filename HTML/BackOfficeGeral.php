@@ -24,8 +24,10 @@ include_once "../PHP/BackOfficeGeralHelper.php";
     include_once "Content/Loader.html";
     ?>
     <div class="container">
+        <a href="#top" class="go-top">Go Top</a>
         <div class="mb-5">
-            <h1 class="text-center pt-3">BackOffice Geral</h1>
+            <div id="top"></div>
+            <h1 class="text-center pt-3" >BackOffice Geral</h1>
             <select id="SortBy" onchange="ChangedSortValue()">
                 <option value="all">TODOS</option>
                 <option value="0">MEO</option>
