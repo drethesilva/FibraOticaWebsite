@@ -15,10 +15,7 @@ if (isset($_REQUEST['action'])) {
     
     switch ($_REQUEST['action']) {
         case "GetContent":
-            $query = $db->prepare("SELECT conteudobackoffice.id, conteudobackoffice.nome, conteudobackoffice.descricao, conteudobackoffice.typeContent, ficheirosconteudobackoffice.nomedoficheiro
-                                   FROM conteudobackoffice, ficheirosconteudobackoffice 
-                                   WHERE conteudobackoffice.id = idconteudo
-                                   ORDER BY id DESC");
+            $query = $db->prepare("SELECT conteudobackoffice.id, conteudobackoffice.nome, conteudobackoffice.descricao, conteudobackoffice.typeContent FROM conteudobackoffice ORDER BY id DESC");
 
             $query->execute();
             $rs = $query->fetchAll(PDO::FETCH_OBJ);
@@ -29,7 +26,7 @@ if (isset($_REQUEST['action'])) {
 
                 if ($idGetted != $r->id) {
                     $idGetted = $r->id;
-                    array_push($ArrayContent, array('id' => $r->id, 'nome' => $r->nome, 'typeContent' => $r->typeContent, 'descricao' => $r->descricao, 'Conteudo' => GetFilesContent($rs, $r->id)));
+                    array_push($ArrayContent, array('id' => $r->id, 'nome' => $r->nome, 'typeContent' => $r->typeContent, 'descricao' => $r->descricao, 'Conteudo' => GetFilesContent($db, $r->id)));
                 }
             }
             echo json_encode($ArrayContent);
@@ -37,13 +34,15 @@ if (isset($_REQUEST['action'])) {
     }
 }
 
-function GetFilesContent($rs, $contentId)
-{
+function GetFilesContent($db, $contentId) {
     $ArrayContentRow = array();
+
+    $query = $db->prepare("SELECT nomedoficheiro FROM `ficheirosconteudobackoffice` WHERE idconteudo = " . $contentId);
+    $query->execute();
+    $rs = $query->fetchAll(PDO::FETCH_OBJ);
     foreach ($rs as $r) {
-        if ($contentId == $r->id) {
-            array_push($ArrayContentRow, $r->nomedoficheiro);
-        }
+        array_push($ArrayContentRow, $r->nomedoficheiro);
     }
+
     return $ArrayContentRow;
 }
