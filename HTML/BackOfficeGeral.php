@@ -23,17 +23,20 @@ include_once "../PHP/BackOfficeGeralHelper.php";
     include_once "Content/Navbar.html";
     include_once "Content/Loader.html";
     ?>
-    <div class="mb-5">
-        <h1>BackOffice Geral</h1>
-        <select id="SortBy" onchange="ChangedSortValue()">
-            <option value="all">TODOS</option>
-            <option value="0">MEO</option>
-            <option value="1">VODAFONE</option>
-        </select>
-    </div>    
+    <div class="container">
+        <div class="mb-5">
+            <h1 class="text-center pt-3">BackOffice Geral</h1>
+            <select id="SortBy" onchange="ChangedSortValue()">
+                <option value="all">TODOS</option>
+                <option value="0">MEO</option>
+                <option value="1">VODAFONE</option>
+            </select>
+        </div>
 
-    <div id="Content">        
+        <div id="Content">
+        </div>
     </div>
+
 </body>
 
 <?php

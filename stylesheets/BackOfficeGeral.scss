@@ -1,1 +1,28 @@
 @import 'Generic';
+
+
+.main-div{
+    background: lightblue;
+    padding: 15px;
+    border-radius: 10px;
+    -webkit-box-shadow: 10px -5px 5px -8px rgba(0, 0, 0, 0.8);
+    -moz-box-shadow: 10px -5px 5px -8px rgba(0, 0, 0, 0.8);
+    box-shadow: 10px -5px 5px -8px rgba(0, 0, 0, 0.8);
+    margin-bottom: 20px;
+
+    h2{
+        text-transform: capitalize;
+        &::first-letter {
+            -webkit-initial-letter: 1;
+                    initial-letter: 1;
+            color: darkblue;
+            font-weight: bold;
+          }
+    }
+
+    i{
+        margin-left:20px;
+    }
+    
+ 
+}
