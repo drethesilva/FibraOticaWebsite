@@ -29,7 +29,7 @@ include_once "../PHP/HomePageHelper.php";
                 <img class="mySlides" src="https://cdn.pixabay.com/photo/2018/01/08/17/37/luminescence-3069828__340.jpg" style="width:100%">
                 <div class="overlay"></div>
             </div>
-           <div class="col-12 col-md-4 Slidshow_imagens_cortadas">
+            <div class="col-12 col-md-4 Slidshow_imagens_cortadas">
                 <div class="Div_imagens_cortadas">
                     <img src="https://image.shutterstock.com/image-photo/network-cables-closeup-fiber-optical-260nw-634322429.jpg" style="width:100%">
                 </div>
@@ -41,6 +41,8 @@ include_once "../PHP/HomePageHelper.php";
                 </div>
             </div>
         </div>
+    </div>
+    <div class="container">
         <div class="row">
             <div class="col-12 col-md-6 div_Video_e_texto">
                 <video controls>
@@ -61,6 +63,8 @@ include_once "../PHP/HomePageHelper.php";
                     </p>
             </div>
         </div>
+    </div>
+
     </div>
 
     <?php
