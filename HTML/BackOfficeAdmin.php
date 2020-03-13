@@ -301,6 +301,11 @@ include_once "../PHP/BackOfficeAdminHelper.php";
                                 <br>
                                 <label class="m-0">Descrição</label>
                                 <input class="w-100" type="text" id="EditDescricaoConteudo" placeholder="Descrição...">
+                                <br>
+                                <select id="EditTypeContent" required>
+                                    <option value="0">MEO</option>
+                                    <option value="1">Vodafone</option>
+                                </select>
                             </div>
 
                             <div>

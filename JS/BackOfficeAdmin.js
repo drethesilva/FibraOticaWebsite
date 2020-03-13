@@ -68,7 +68,7 @@ function GetConteudo() {
                 "<tr>" +
                 "<td id='TituloConteudo_" + element.id + "'> " + element.nome + " </td>" +
                 "<td id='DescricaoConteudo_" + element.id + "'> " + element.descricao + " </td>" +
-                "<td id='ButtonsConteudo_" + element.id + "'> <button data-toggle='modal' data-target='#EditConteudo' onclick='GetCurrentConteudo(" + element.id + ", \"" + element.nome + "\", \"" + element.descricao + "\");'>Edit</button> <button onclick='DeleteConteudo(" + element.id + ");'>Del</button> </td>" +
+                "<td id='ButtonsConteudo_" + element.id + "'> <button data-toggle='modal' data-target='#EditConteudo' onclick='GetCurrentConteudo(" + element.id + ", \"" + element.nome + "\", \"" + element.descricao + "\", \"" + element.typeContent + "\");'>Edit</button> <button onclick='DeleteConteudo(" + element.id + ");'>Del</button> </td>" +
                 "</tr>"
             );
             $("#Loader").hide();
@@ -130,7 +130,7 @@ function GetCurrentTecnico(id, Nome, Email) {
 }
 
 var CurrentEditingConteudo = -1;
-function GetCurrentConteudo(id, Nome, Descricao) {
+function GetCurrentConteudo(id, Nome, Descricao, TypeContent) {
     $("#EditImgDiv").empty();
 
     CurrentEditingConteudo = id;
@@ -138,6 +138,7 @@ function GetCurrentConteudo(id, Nome, Descricao) {
     $("#TituloConteudo").html("Edite o Conteudo:");
     $("#EditTituloConteudo").val(Nome);
     $("#EditDescricaoConteudo").val(Descricao);
+    $('#EditTypeContent').val(TypeContent).change();
 
     $.post('../Handlers/BackOfficeAdminHandlers.php?action=GetConteudoFiles', { 'id': CurrentEditingConteudo }, function (response) {
         JSON.parse(response).forEach(e => {
@@ -194,7 +195,7 @@ function EditTecnico() {
 
 function EditConteudo() {
     $("#Loader").show();
-    $.post('../Handlers/BackOfficeAdminHandlers.php?action=EditConteudo', { 'IdConteudo': CurrentEditingConteudo, 'TituloConteudo': $("#EditTituloConteudo").val(), 'DescricaoConteudo': $("#EditDescricaoConteudo").val() }, function (response) {
+    $.post('../Handlers/BackOfficeAdminHandlers.php?action=EditConteudo', { 'IdConteudo': CurrentEditingConteudo, 'TituloConteudo': $("#EditTituloConteudo").val(), 'DescricaoConteudo': $("#EditDescricaoConteudo").val(), 'TypeContent': $('#EditTypeContent').val() }, function (response) {
 
         $("#InfoAlert").html(response);
         $("#InfoAlertDiv").modal('show');

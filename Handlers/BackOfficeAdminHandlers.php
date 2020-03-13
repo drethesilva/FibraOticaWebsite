@@ -82,7 +82,7 @@ if (isset($_REQUEST['action'])) {
             echo "Técnico editado com successo";
             break;
         case "EditConteudo":
-            $query = $db->prepare("UPDATE conteudobackoffice SET nome= '" . $_POST["TituloConteudo"] . "', descricao='" . $_POST["DescricaoConteudo"] . "' WHERE id='" . $_POST["IdConteudo"] . "'");
+            $query = $db->prepare("UPDATE conteudobackoffice SET nome= '" . $_POST["TituloConteudo"] . "', descricao='" . $_POST["DescricaoConteudo"] . "', typeContent='" . $_POST["TypeContent"] . "' WHERE id='" . $_POST["IdConteudo"] . "'");
             $query->execute();
             echo "Conteudo editado com successo";
             break;
