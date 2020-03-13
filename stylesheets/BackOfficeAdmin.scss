@@ -62,7 +62,7 @@ button, input[type="submit"]{
     border-top-left-radius: 3px;
 }
 
-.panel>.table, .panel>.table-responsive>.table {
+.panel>.table-responsive, .panel>.table-responsive>.table-responsive {
     margin-bottom: 0;
 }
 
@@ -91,6 +91,31 @@ button, input[type="submit"]{
     -webkit-box-shadow: 10px -5px 5px -8px rgba(0,0,0,0.8);
     -moz-box-shadow: 10px -5px 5px -8px rgba(0,0,0,0.8);
     box-shadow: 10px -5px 5px -8px rgba(0,0,0,0.8);
+
+    &:hover{
+        background: #d7ecff;
+    }
+
+    @media (max-width:$screen-xs-max){
+        padding: 10px;
+    }
+
+    p{
+        margin-bottom: 0;
+       
+    }
+
+    div[class="row"]{
+        margin-top: 15px;
+    }
+
+    button, input[type="submit"]{
+        margin-top: 15px;
+    }
+
+    label{
+        margin-top:15px;
+    }
 }
 
 input[type="text"],input[type="email"],input[type="password"]{

@@ -57,26 +57,26 @@ include_once "../PHP/BackOfficeAdminHelper.php";
             <div class="col-12 col-md-6 mb-4">
                 <div class="color">
                     <form action="../Handlers/BackOfficeAdminHandlers.php?action=AddContent" method="post" enctype="multipart/form-data">
-                        <h3>Adicionar Conteúdo</h3>
+                        <h3><i class="fas fa-plus-square"></i> Adicionar Conteúdo</h3>
                         <div class="row">
-                            <div class="col">
+                            <div class="col-12 col-md">
                                 <p>Titulo</p>
                             </div>
-                            <div class="col"> <input type="text" name="Titulo" id="Titulo" placeholder="Titulo" required>
+                            <div class="col-12 col-md"> <input type="text" name="Titulo" id="Titulo" placeholder="Titulo" required>
                             </div>
                         </div>
                         <div class="row">
-                            <div class="col">
+                            <div class="col-12 col-md">
                                 <p>Descricao</p>
                             </div>
-                            <div class="col"><input type="text" name="Descricao" id="Descricao" placeholder="Descricao" required>
+                            <div class="col-12 col-md"><input type="text" name="Descricao" id="Descricao" placeholder="Descricao" required>
                             </div>
                         </div>
                         <div class="row">
-                            <div class="col">
+                            <div class="col-12 col-md">
                                 <p>Escolha o tipo de operadora</p>
                             </div>
-                            <div class="col">
+                            <div class="col-12 col-md">
                                 <select id="TypeContent" name="TypeContent" required>
                                     <option value="0">MEO</option>
                                     <option value="1">Vodafone</option>
@@ -84,13 +84,13 @@ include_once "../PHP/BackOfficeAdminHelper.php";
                             </div>
                         </div>
                         <div class="row">
-                            <div class="col">
+                            <div class="col-12 col-md">
                                 <input type="file" name="InputFile[]" id="InputFile" class="inputfile" multiple="multiple">
                                 <label for="InputFile">Choose a file</label>
                             </div>
                         </div>
                         <div class="row">
-                            <div class="col">
+                            <div class="col-12 col-md">
                                 <input type="submit" value="Enviar" name="submit" onclick="AddContent();">
                             </div>
                         </div>
@@ -106,37 +106,37 @@ include_once "../PHP/BackOfficeAdminHelper.php";
             <div class="col-12 col-md-6 mb-4">
                 <div class="color">
                     <form id="CreateAccountForm">
-                        <h3> Adicionar conta de um Técnico </h3>
+                        <h3><i class="fas fa-plus-square"></i> Adicionar conta de um Técnico </h3>
 
                         <div class="row">
-                            <div class="col">
+                            <div class="col-12 col-md">
                                 <p> Nome </p>
                             </div>
-                            <div class="col">
+                            <div class="col-12 col-md">
                                 <input type="text" id="NomeTecnico" placeholder="Nome" required>
                             </div>
                         </div>
 
                         <div class="row">
-                            <div class="col">
+                            <div class="col-12 col-md">
                                 <p> Email </p>
                             </div>
-                            <div class="col">
+                            <div class="col-12 col-md">
                                 <input type="email" id="EmailTecnico" placeholder="Email" required>
                             </div>
                         </div>
 
                         <div class="row">
-                            <div class="col">
+                            <div class="col-12 col-md">
                                 <p> Password </p>
                             </div>
-                            <div class="col">
+                            <div class="col-12 col-md">
                                 <input type="password" id="PasswordTecnico" placeholder="Password" required>
                             </div>
                         </div>
 
                         <div class="row">
-                            <div class="col">
+                            <div class="col-12 col-md">
                                 <button type="submit">Criar Conta</button>
                             </div>
                         </div>
@@ -151,18 +151,18 @@ include_once "../PHP/BackOfficeAdminHelper.php";
             <div class="col-12 col-lg-6 mb-4">
                 <div class="color">
                     <form id="ChangeGeralPasswordForm">
-                        <h3> Alterar passe Geral </h3>
+                        <h3> <i class="fas fa-edit"></i> Alterar passe Geral </h3>
 
                         <div class="row">
-                            <div class="col">
+                            <div class="col-12 col-md">
                                 <p>Nova Password</p>
                             </div>
-                            <div class="col">
+                            <div class="col-12 col-md">
                                 <input type="password" id="PasswordGeral" required>
                             </div>
                         </div>
                         <div class="row">
-                            <div class="col">
+                            <div class="col-12 col-md">
                                 <button type="submit">Alterar Password</button>
                             </div>
                         </div>
@@ -177,7 +177,7 @@ include_once "../PHP/BackOfficeAdminHelper.php";
 
             <div class="col-12 col-lg-6 mb-4">
                 <div class="color">
-                    <h3> Adicionar Conteúdo Excel </h3>
+                    <h3> <i class="fas fa-plus-square"></i> Adicionar Conteúdo Excel </h3>
 
                     <input type="file" id="files" class="inputfile" name="files" accept=".xlsx, .xls, .csv" />
                     <label for="files">Choose a file</label>
@@ -203,7 +203,7 @@ include_once "../PHP/BackOfficeAdminHelper.php";
                                     <button class="btn btn-light btn-xs btn-filter"><span class="glyphicon glyphicon-filter"></span> Filter</button>
                                 </div>
                             </div>
-                            <table class="table">
+                            <table class="table table-responsive">
                                 <thead>
                                     <tr class="filters">
                                         <th><input type="text" class="form-control" placeholder="Nome" disabled></th>
@@ -266,7 +266,7 @@ include_once "../PHP/BackOfficeAdminHelper.php";
                                     <button class="btn btn-light btn-xs btn-filter"><span class="glyphicon glyphicon-filter"></span> Filter</button>
                                 </div>
                             </div>
-                            <table class="table">
+                            <table class="table table-responsive">
                                 <thead>
                                     <tr class="filters">
                                         <th><input type="text" class="form-control" placeholder="Titulo" disabled></th>
