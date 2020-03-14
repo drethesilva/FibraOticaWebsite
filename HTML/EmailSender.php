@@ -1,12 +1,12 @@
 <html>
     <head>
-        <script src="https://smtpjs.com/v3/smtp.js"></script>   
+        <!--<script src="https://smtpjs.com/v3/smtp.js"></script>   !-->
         <?php
             include_once "Content/_header.html";
         ?>
     </head>
     <body>
-        <script>
+        <!--<script>
             Email.send({
                 Host : "smtp.gmail.com",
                 Port : "587",
@@ -17,11 +17,13 @@
                 From : "luis2.128.b80@gmail.com",
                 Subject : "This is the subject",
                 Body : "And this is the body"
+                
             }).then(
                 message => alert(message)
             );
             
-        </script>
+        </script>-->
+        <a href="mailto:someone@example.com?Subject=Hello%20again" target="_top">Send Mail</a>
         <?php
             include_once "Content/_scripts.html";
         ?>
