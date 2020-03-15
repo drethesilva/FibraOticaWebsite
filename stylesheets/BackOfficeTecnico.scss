@@ -1,1 +1,55 @@
 @import 'Generic';
+
+p{
+    margin-bottom: 0;
+}
+
+.link{
+
+    i{
+        margin-right: 10px;
+    }
+
+    
+    @media (max-width:$screen-xs-max){
+        margin-bottom: 20px;
+    }
+
+    padding: 15px;
+
+    display: block;
+    text-align: center;
+    background-color: aliceblue;
+    &:hover
+    {text-decoration: none;    -webkit-box-shadow: 10px -5px 5px -8px rgba(0, 0, 0, 0.8);
+        -moz-box-shadow: 10px -5px 5px -8px rgba(0, 0, 0, 0.8);
+        box-shadow: 10px -5px 5px -8px rgba(0, 0, 0, 0.8);}
+}
+
+.inputfile {
+	width: 0.1px;
+	height: 0.1px;
+	opacity: 0;
+	overflow: hidden;
+	position: absolute;
+	z-index: -1;
+}
+
+.inputfile + label {
+    font-size: 1.25em;
+    font-weight: 700;
+    color: white;
+    background-color: rgb(95, 158, 160);
+    padding: 5px;
+    border-radius: 10px;
+    display: inline-block;
+    
+}
+
+.inputfile:focus + label,
+.inputfile + label:hover {
+    background-color: rgba(95, 158, 160,0.8);
+}
+.inputfile + label {
+	cursor: pointer; /* "hand" cursor */
+}
