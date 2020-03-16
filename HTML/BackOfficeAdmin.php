@@ -174,21 +174,6 @@ include_once "../PHP/BackOfficeAdminHelper.php";
 
             </div>
 
-
-            <div class="col-12 col-lg-6 mb-4">
-                <div class="color">
-                    <h3> <i class="fas fa-plus-square"></i> Adicionar Conteúdo Excel </h3>
-
-                    <input type="file" id="files" class="inputfile" name="files" accept=".xlsx, .xls, .csv" />
-                    <label for="files">Choose a file</label>
-                    
-                    <a href='../Files/FibraOticaExcell.xlsx' target="_blank">Download</a>
-
-
-                </div>
-
-            </div>
-
             <div class="col-12 mb-4">
                 <hr>
                 <h3> Editar/Apagar Técnicos </h3>

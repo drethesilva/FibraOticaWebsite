@@ -34,8 +34,17 @@ function GetContent() {
                 }
             });
 
-            if(element.descricao != " "){
-                $("#DivParent_" + element.id).append("<h4>Texto Adicional:</h4><p>" + element.descricao + "</p>");
+            if (element.descricao != " ") {
+                var text = element.descricao;
+                
+                var $words = text.split(' ');
+                for (i in $words) {
+                    if ($words[i].indexOf('http://') == 0) {
+                        $words[i] = '<a href="' + $words[i] + '">' + $words[i] + '</a>';
+                    }
+                }
+
+                $("#DivParent_" + element.id).append("<h4>Texto Adicional:</h4><p>" + $words.join(' ') + "</p>");
             }
 
         });

@@ -22,31 +22,47 @@ include_once "../PHP/BackOfficeTecnicoHelper.php";
     <?php
     include_once "Content/Navbar.html";
     ?>
-    <h1>BackOffice Tecnico</h1>
+    <div class="container">
+        <h1 class="text-center pt-4">BackOffice Tecnico</h1>
+        <hr>
 
-    <a href="../Files/Folha Requisição Tarefosucesso.xlsx" download>
-        <p>Download Controlo DST-MEO</p>
-    </a>
-
-    <a href="../Files/Controlo DST-MEO.xlsx" download>
-        <p>Download Folha Requisição Tarefosucesso</p>
-    </a>
-
-
-    <form action="../Handlers/BackOfficeTecnicoHandlers.php?action=AddContent" method="post" enctype="multipart/form-data">
-        <h3>Adicionar Conteúdo</h3>
         <div class="row">
-            <div class="col">
-                <input type="file" name="InputFile[]" id="InputFile" class="inputfile" multiple="multiple">
-                <label for="InputFile">Choose a file</label>
+            <div class="col-12 col-md-6">
+                <a class="link" href="../Files/Folha Requisição Tarefosucesso.xlsx" download>
+                    <p><i class="fas fa-download"></i>Download Controlo DST-MEO</p>
+                </a>
+            </div>
+            <div class="col-12 col-md-6">
+                <a class="link" href="../Files/Controlo DST-MEO.xlsx" download>
+                    <p><i class="fas fa-download"></i>Download Folha Requisição Tarefosucesso</p>
+                </a>
             </div>
         </div>
-        <div class="row">
-            <div class="col">
-                <input type="submit" value="Enviar" name="submit" onclick="AddContent();">
+
+
+
+
+        <form action="../Handlers/BackOfficeTecnicoHandlers.php?action=AddContent" method="post" enctype="multipart/form-data">
+
+            <div class="row">
+                <div class="col-12">
+                    <h3 class="text-left mt-4">Adicionar Conteúdo</h3>
+                </div>
+                <div class="col-12">
+                    <div class="text-left">
+                        <input type="file" name="InputFile[]" id="InputFile" class="inputfile" multiple="multiple">
+                        <label for="InputFile">Choose a file</label>
+                        <input type="submit" value="Enviar" name="submit" onclick="AddContent();">
+                    </div>
+
+                </div>
             </div>
-        </div>
-    </form>
+        </form>
+    </div>
+
+
+
+
 </body>
 
 <?php
