@@ -49,25 +49,26 @@ include_once "../PHP/HomePageHelper.php";
         <p class="w3-justify">We have created a fictional band website. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
     </section>
 
-    <!-- Band Members -->
-    <section class="w3-row-padding w3-center w3-light-grey">
-        <article class="w3-third">
-            <p>John</p>
-            <img src="https://live.staticflickr.com/143/345519308_093f672a43_b.jpg" alt="Random Name" style="width:100%">
-            <p>John is the smartest.</p>
-        </article>
-        <article class="w3-third">
-            <p>Paul</p>
-            <img src="https://torange.biz/photofx/63/8/hard-dark-very-vivid-colours-fragment-optical-fiber-63107.jpg" alt="Random Name" style="width:100%">
-            <p>Paul is the prettiest.</p>
-        </article>
-        <article class="w3-third">
-            <p>Ringo</p>
-            <img src="https://p2.piqsels.com/preview/130/328/907/glass-fibres-light-light-pipe-led.jpg" alt="Random Name" style="width:100%">
-            <p>Ringo is the funniest.</p>
-        </article>
-    </section>
-
+    <div class="container" >
+        <!-- Band Members -->
+        <section class="w3-row-padding w3-center w3-light-grey">
+            <article class="w3-third">
+                <p>John</p>
+                <img src="https://live.staticflickr.com/143/345519308_093f672a43_b.jpg" alt="Random Name" style="width:100%">
+                <p>John is the smartest.</p>
+            </article>
+            <article class="w3-third">
+                <p>Paul</p>
+                <img src="https://torange.biz/photofx/63/8/hard-dark-very-vivid-colours-fragment-optical-fiber-63107.jpg" alt="Random Name" style="width:100%">
+                <p>Paul is the prettiest.</p>
+            </article>
+            <article class="w3-third">
+                <p>Ringo</p>
+                <img src="https://p2.piqsels.com/preview/130/328/907/glass-fibres-light-light-pipe-led.jpg" alt="Random Name" style="width:100%">
+                <p>Ringo is the funniest.</p>
+            </article>
+        </section>
+    </div>
 
  
 
